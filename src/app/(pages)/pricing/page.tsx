@@ -1,11 +1,10 @@
 import { FormNav } from "@/app/_components/form-nav";
-import { FormPage } from "@/app/_components/form-page";
 
-export default function SilSaas() {
+export default function Pricing() {
   return (
     <div>
       <FormNav />
-      <FormPage />
+      Pricing
     </div>
   );
 }
