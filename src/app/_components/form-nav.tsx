@@ -41,9 +41,10 @@ export function FormNav() {
       <div className="flex items-center gap-5">
         <Link
           href="/"
-          className="text-2xl font-bold tracking-tight text-[#dc2626] scroll-m-20"
+          className="flex text-2xl font-bold tracking-tight scroll-m-20"
         >
-          sil-saas/
+          sil-
+          <p className="text-[#dc2626] ">saas/</p>
         </Link>
         <NavigationMenu className="hidden lg:block">
           <NavigationMenuList>
@@ -123,7 +124,7 @@ export function FormNav() {
                         <AccordionContent key={component.title}>
                           <Link
                             href={component.href}
-                            className="flex flex-col items-start select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="flex flex-col items-start select-none space-y-1 rounded-sm p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <p className="text-base">{component.title}</p>
                             <p className="text-sm text-muted-foreground">

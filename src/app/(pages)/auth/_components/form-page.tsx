@@ -48,6 +48,7 @@ export function FormPage() {
           "Verifique seu e-mail para obter o link mágico e fazer login.",
       });
     } catch {
+      console.log("Deu erro chibatona!");
       toast({
         title: "Erro",
         description: "Um erro ocorreu. Por favor, tente novamente.",

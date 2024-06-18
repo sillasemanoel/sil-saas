@@ -6,7 +6,15 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   const protectedRoutes = ["/app"];
-  const validRoutes = ["/", "/auth", "/products/task", "/pricing", "/app"];
+  const validRoutes = [
+    "/",
+    "/auth",
+    "/products/task",
+    "/pricing",
+    "/help",
+    "/app",
+    "/app/settings",
+  ];
 
   console.log({
     token: token?.value,

@@ -1,5 +1,5 @@
 import { FormPage } from "@/app/(pages)/auth/_components/form-page";
 
-export default function MagicLink() {
+export default function Auth() {
   return <FormPage />;
 }
