@@ -4,7 +4,7 @@ export default function Task() {
   return (
     <div>
       <FormNav />
-      Tarefas
+      Task
     </div>
   );
 }

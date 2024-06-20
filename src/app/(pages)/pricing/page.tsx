@@ -4,7 +4,7 @@ export default function Pricing() {
   return (
     <div>
       <FormNav />
-      Preços
+      Pricing
     </div>
   );
 }
