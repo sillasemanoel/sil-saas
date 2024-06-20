@@ -3,9 +3,9 @@ import { FormPage } from "@/app/_components/form-page";
 
 export default function RootPage() {
   return (
-    <div>
+    <header>
       <FormNav />
       <FormPage />
-    </div>
+    </header>
   );
 }

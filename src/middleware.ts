@@ -11,9 +11,9 @@ export function middleware(request: NextRequest) {
     "/auth",
     "/products/task",
     "/pricing",
-    "/help",
     "/app",
     "/app/settings",
+    "/help",
   ];
 
   console.log({

@@ -2,6 +2,7 @@
 
 import {
   Sidebar,
+  SidebarLogo,
   SidebarHeader,
   SidebarMain,
   SidebarNav,
@@ -9,7 +10,7 @@ import {
   SidebarNavLink,
   SidebarHeaderTitle,
   SidebarFooter,
-} from "@/app/components/app/sidebar";
+} from "@/components/dashboard/sidebar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -22,7 +23,7 @@ export function FormLayout() {
 
   return (
     <Sidebar>
-      <SidebarHeader>
+      <SidebarLogo>
         <Link
           href="/app"
           className="flex text-2xl font-bold tracking-tight scroll-m-20"
@@ -30,7 +31,7 @@ export function FormLayout() {
           sil-
           <p className="text-[#dc2626] ">saas/</p>
         </Link>
-      </SidebarHeader>
+      </SidebarLogo>
       <SidebarMain>
         <SidebarNav>
           <SidebarNavMain>
@@ -47,7 +48,7 @@ export function FormLayout() {
         </SidebarNav>
 
         <SidebarNav>
-          <SidebarHeader className="py-0">
+          <SidebarHeader>
             <SidebarHeaderTitle>Links extras</SidebarHeaderTitle>
           </SidebarHeader>
           <SidebarNavMain>

@@ -1,4 +1,4 @@
-export default function Help() {
+export default function Settings() {
   return (
     <main className="flex items-center justify-center h-screen">help</main>
   );

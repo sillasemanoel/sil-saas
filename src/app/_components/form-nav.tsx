@@ -37,7 +37,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function FormNav() {
   return (
-    <nav className="fixed z-100 flex h-[60px] w-screen items-center justify-between px-7">
+    <nav className="fixed z-100 flex h-16 w-screen items-center justify-between text-base px-7">
       <div className="flex items-center gap-5">
         <Link
           href="/"
@@ -53,7 +53,7 @@ export function FormNav() {
                 Produtos
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[300px] grid-cols-1 gap-3 p-4">
+                <ul className="grid w-[18rem] grid-cols-1 gap-3 p-4">
                   {components.map((component) => (
                     <li key={component.title}>
                       <NavigationMenuLink asChild>
@@ -61,7 +61,7 @@ export function FormNav() {
                           href={component.href}
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <p className="text-base">{component.title}</p>
+                          <p>{component.title}</p>
                           <p className="text-sm text-muted-foreground">
                             {component.description}
                           </p>
@@ -73,7 +73,7 @@ export function FormNav() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/pricing" className="text-base">
+              <Link href="/pricing">
                 <Button variant="ghost" className="text-base">
                   Preços
                 </Button>
@@ -85,7 +85,10 @@ export function FormNav() {
       <div className="flex items-center gap-5">
         <div className="hidden lg:block items-center gap-3">
           <Link href="/auth">
-            <Button variant="link" className="text-base text-black">
+            <Button
+              variant="link"
+              className="text-base text-[#0a0a0a] dark:text-white"
+            >
               Fazer login
             </Button>
           </Link>
@@ -100,16 +103,13 @@ export function FormNav() {
                 variant="ghost"
                 className="flex w-9 items-center justify-center p-0"
               >
-                <TextAlignJustifyIcon className="h-[23px] w-[23px] rotate-0 scale-100" />
+                <TextAlignJustifyIcon className="h-[1.75rem] w-[1.75rem] rotate-0 scale-100" />
               </Button>
             </SheetTrigger>
             <SheetContent className="flex flex-col justify-between">
               <div>
-                <div className="mb-4">
-                  <Link
-                    href="/"
-                    className="text-base font-semibold hover:underline"
-                  >
+                <div className="my-4">
+                  <Link href="/" className="font-semibold hover:underline">
                     Início
                   </Link>
                 </div>
@@ -124,7 +124,7 @@ export function FormNav() {
                         <AccordionContent key={component.title}>
                           <Link
                             href={component.href}
-                            className="flex flex-col items-start select-none space-y-1 rounded-sm p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="flex flex-col items-start select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <p className="text-base">{component.title}</p>
                             <p className="text-sm text-muted-foreground">
@@ -136,10 +136,10 @@ export function FormNav() {
                     </AccordionItem>
                   </Accordion>
                 </SheetHeader>
-                <div className="mt-4">
+                <div className="my-4">
                   <Link
                     href="/pricing"
-                    className="text-base font-semibold hover:underline"
+                    className="font-semibold hover:underline"
                   >
                     Preços
                   </Link>
@@ -162,10 +162,10 @@ export function FormNav() {
         </div>
       </div>
       <div className="fixed bottom-2 right-2">
-        <p className="flex items-center gap-1 text-base">
+        <p className="flex items-center gap-1">
           Desenvolvido por{" "}
           <a
-            href="https://www.linkedin.com/in/sillas-emanoel-656478218/"
+            href="https://portfolio-ashy-six-85.vercel.app"
             target="_blank"
             className="flex items-center gap-2"
           >

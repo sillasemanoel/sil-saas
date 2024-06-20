@@ -48,11 +48,32 @@ export function Sidebar(props: SidebarGenericProps) {
   );
 }
 
+export function SidebarLogo(props: SidebarGenericProps) {
+  return (
+    <nav
+      className={cn(["flex flex-none h-16 items-center px-7", props.className])}
+    >
+      {props.children}
+    </nav>
+  );
+}
+
+export function SidebarMain(props: SidebarGenericProps) {
+  return (
+    <main
+      className={cn([
+        "flex flex-col justify-between h-full p-4",
+        props.className,
+      ])}
+    >
+      {props.children}
+    </main>
+  );
+}
+
 export function SidebarHeader(props: SidebarGenericProps) {
   return (
-    <header className={cn(["px-7 py-[14px]", props.className])}>
-      {props.children}
-    </header>
+    <div className={cn(["px-3 py-2", props.className])}>{props.children}</div>
   );
 }
 
@@ -60,7 +81,7 @@ export function SidebarHeaderTitle(props: SidebarGenericProps) {
   return (
     <p
       className={cn([
-        "text-xs uppercase text-muted-foreground -ml-4",
+        "text-xs uppercase text-muted-foreground",
         props.className,
       ])}
     >
@@ -69,38 +90,15 @@ export function SidebarHeaderTitle(props: SidebarGenericProps) {
   );
 }
 
-export function SidebarMain(props: SidebarGenericProps) {
-  return (
-    <main
-      className={cn([
-        "flex flex-col justify-between h-full px-3 py-5",
-        props.className,
-      ])}
-    >
-      {props.children}
-    </main>
-  );
-}
-
 export function SidebarNav(props: SidebarGenericProps) {
-  return <nav className={cn(["", props.className])}>{props.children}</nav>;
-}
-
-export function SidebarNavHeader(props: SidebarGenericProps) {
-  return (
-    <header className={cn(["", props.className])}>{props.children}</header>
-  );
-}
-
-export function SidebarNavHeaderTitle(props: SidebarGenericProps) {
-  return <p className={cn(["", props.className])}>{props.children}</p>;
+  return <div className={cn(["", props.className])}>{props.children}</div>;
 }
 
 export function SidebarNavMain(props: SidebarGenericProps) {
   return (
-    <main className={cn(["h-full flex flex-col", props.className])}>
+    <div className={cn(["h-full flex flex-col", props.className])}>
       {props.children}
-    </main>
+    </div>
   );
 }
 
@@ -116,8 +114,8 @@ export function SidebarNavLink(
     <Link
       href={props.href}
       className={cn([
-        "text-sm px-3 py-2",
-        props.active && "bg-secondary rounded-sm",
+        "px-3 py-2",
+        props.active && "bg-accent rounded-md",
         props.className,
       ])}
     >
@@ -130,7 +128,7 @@ export function SidebarFooter(props: SidebarGenericProps) {
   return (
     <footer
       className={cn([
-        "px-7 py-5 mt-auto border-t border-border",
+        "flex flex-none h-16 items-center px-7 border-t border-border",
         props.className,
       ])}
     >

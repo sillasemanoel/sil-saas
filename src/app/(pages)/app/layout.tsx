@@ -1,4 +1,4 @@
-import { FormLayout } from "@/app/(pages)/(app)/app/_components/form-layout";
+import { FormLayout } from "@/app/(pages)/app/_components/form-layout";
 
 type Props = {
   children: React.ReactNode;
@@ -6,7 +6,7 @@ type Props = {
 
 export default async function Layout(props: Props) {
   return (
-    <header className="grid grid-cols-[16rem_1fr]">
+    <header className="grid grid-cols-[18rem_1fr]">
       <FormLayout />
       {props.children}
     </header>
