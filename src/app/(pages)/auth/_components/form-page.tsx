@@ -41,7 +41,7 @@ export function FormPage() {
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
     try {
-      await signIn("email", { email: data.email, redirect: false });
+      await signIn("nodemailer", { email: data.email, redirect: false });
       toast({
         title: "Link mágico enviado",
         description:
@@ -57,7 +57,7 @@ export function FormPage() {
   };
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <section className="flex h-screen w-screen items-center justify-center">
       <Card className="flex w-full max-w-md flex-col">
         <div className="flex w-full justify-end px-3 pt-3 -mb-6">
           <Link href="/">
@@ -89,13 +89,17 @@ export function FormPage() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="mt-3 w-full text-base">
-                Enviar
+              <Button
+                type="submit"
+                className="mt-3 w-full"
+                disabled={form.formState.isSubmitting}
+              >
+                {form.formState.isSubmitting ? "Enviando..." : "Enviar"}
               </Button>
             </form>
           </Form>
         </CardContent>
       </Card>
-    </div>
+    </section>
   );
 }

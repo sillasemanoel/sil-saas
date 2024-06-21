@@ -37,7 +37,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function FormNav() {
   return (
-    <nav className="fixed z-100 flex h-16 w-screen items-center justify-between text-base px-7">
+    <nav className="fixed z-100 flex h-16 w-screen items-center justify-between px-7">
       <div className="flex items-center gap-5">
         <Link
           href="/"
@@ -49,9 +49,12 @@ export function FormNav() {
         <NavigationMenu className="hidden lg:block">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-base">
-                Produtos
-              </NavigationMenuTrigger>
+              <Link href="/">
+                <Button variant="ghost">Início</Button>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Produtos</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[18rem] grid-cols-1 gap-3 p-4">
                   {components.map((component) => (
@@ -62,7 +65,7 @@ export function FormNav() {
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <p>{component.title}</p>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-xs text-muted-foreground">
                             {component.description}
                           </p>
                         </Link>
@@ -74,26 +77,21 @@ export function FormNav() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/pricing">
-                <Button variant="ghost" className="text-base">
-                  Preços
-                </Button>
+                <Button variant="ghost">Preços</Button>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div className="flex items-center gap-5">
-        <div className="hidden lg:block items-center gap-3">
+      <div className="flex items-center">
+        <div className="hidden lg:block items-center space-x-3">
           <Link href="/auth">
-            <Button
-              variant="link"
-              className="text-base text-[#0a0a0a] dark:text-white"
-            >
+            <Button variant="link" className="text-[#0a0a0a] dark:text-white">
               Fazer login
             </Button>
           </Link>
           <Link href="/auth">
-            <Button className="text-base">Registre-se gratuitamente</Button>
+            <Button>Registre-se gratuitamente</Button>
           </Link>
         </div>
         <div className="block flex-row lg:hidden">
@@ -117,7 +115,7 @@ export function FormNav() {
                 <SheetHeader>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger className="text-base font-semibold">
+                      <AccordionTrigger className=" font-semibold">
                         Produtos
                       </AccordionTrigger>
                       {components.map((component) => (
@@ -126,8 +124,8 @@ export function FormNav() {
                             href={component.href}
                             className="flex flex-col items-start select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <p className="text-base">{component.title}</p>
-                            <p className="text-sm text-muted-foreground">
+                            <p>{component.title}</p>
+                            <p className="text-xs text-muted-foreground">
                               {component.description}
                             </p>
                           </Link>
@@ -145,14 +143,12 @@ export function FormNav() {
                   </Link>
                 </div>
               </div>
-              <div className="flex flex-col items-center gap-3">
+              <div className="flex flex-col items-center space-y-3">
                 <Link href="/auth" className="w-full">
-                  <Button className="w-full text-base">
-                    Registre-se gratuitamente
-                  </Button>
+                  <Button className="w-full ">Registre-se gratuitamente</Button>
                 </Link>
                 <Link href="/auth" className="w-full">
-                  <Button variant="outline" className="w-full text-base">
+                  <Button variant="outline" className="w-full ">
                     Fazer login
                   </Button>
                 </Link>
@@ -169,7 +165,7 @@ export function FormNav() {
             target="_blank"
             className="flex items-center gap-2"
           >
-            <Button variant="link" className="p-0 text-base font-semibold">
+            <Button variant="link" className="p-0 font-semibold">
               Sillas Emanoel
             </Button>
             <Image

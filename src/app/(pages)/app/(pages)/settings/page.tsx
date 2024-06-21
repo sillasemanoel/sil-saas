@@ -1,5 +1,3 @@
-export default function Settings() {
-  return (
-    <main className="flex items-center justify-center h-screen">settings</main>
-  );
+export default async function Settings() {
+  return <div>Configurações</div>;
 }

@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
   const token = request.cookies.get("authjs.session-token");
   const pathname = request.nextUrl.pathname;
 
-  const protectedRoutes = ["/app"];
+  const protectedRoutes = ["/app", "/help"];
   const validRoutes = [
     "/",
     "/auth",
@@ -13,6 +13,7 @@ export function middleware(request: NextRequest) {
     "/pricing",
     "/app",
     "/app/settings",
+    "/app/upgrade",
     "/help",
   ];
 

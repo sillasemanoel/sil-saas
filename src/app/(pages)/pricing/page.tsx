@@ -1,10 +1,10 @@
-import { FormNav } from "@/app/_components/form-nav";
+import { FormNav } from "@/app/(pages)/_components/form-nav-page";
 
 export default function Pricing() {
   return (
-    <div>
+    <section>
       <FormNav />
       Pricing
-    </div>
+    </section>
   );
 }
