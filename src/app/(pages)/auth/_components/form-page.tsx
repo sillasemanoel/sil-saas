@@ -27,7 +27,7 @@ import { toast } from "@/components/ui/use-toast";
 
 const FormSchema = z.object({
   email: z.string().email({
-    message: "Formato de email inválido.",
+    message: "Formato de email inválido",
   }),
 });
 

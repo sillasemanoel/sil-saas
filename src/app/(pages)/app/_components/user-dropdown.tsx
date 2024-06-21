@@ -29,7 +29,7 @@ export function UserDropdown({ user }: Props) {
       <DropdownMenuTrigger asChild>
         <Button
           variant="link"
-          className="relative h-8 flex items-center justify-between gap-x-2 !px-0 text-[#0a0a0a] dark:text-white"
+          className="relative h-8 flex items-center justify-between gap-x-2 !px-0"
         >
           <Avatar className="h-8 w-8">
             <AvatarImage src={user.image as string} alt={user.name as string} />

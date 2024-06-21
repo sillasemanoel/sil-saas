@@ -1,9 +1,9 @@
-import { FormNav } from "@/app/(pages)/_components/form-nav-page";
+import { FormNavPage } from "@/app/(pages)/_components/form-nav-page";
 
 export default function Task() {
   return (
     <section>
-      <FormNav />
+      <FormNavPage />
       Task
     </section>
   );

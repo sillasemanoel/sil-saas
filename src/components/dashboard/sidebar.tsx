@@ -55,12 +55,7 @@ export function DashboardSidebarHeaderTitle(
   props: DashboardSidebarGenericProps
 ) {
   return (
-    <p
-      className={cn([
-        "text-xs uppercase text-muted-foreground",
-        props.className,
-      ])}
-    >
+    <p className={cn(["text-xs uppercase", props.className])}>
       {props.children}
     </p>
   );
@@ -90,8 +85,8 @@ export function DashboardSidebarNavLink(
     <Link
       href={props.href}
       className={cn([
-        "flex gap-2 rounded-md items-center px-3 py-2",
-        props.active && "bg-accent",
+        "flex gap-2 rounded-md items-center px-3 py-2 text-muted-foreground hover:text-[#09090b] dark:hover:text-white",
+        props.active && "bg-accent text-[#09090b] dark:text-white",
         props.className,
       ])}
     >

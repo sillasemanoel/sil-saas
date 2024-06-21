@@ -35,7 +35,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export function FormNav() {
+export function FormNavPage() {
   return (
     <nav className="fixed z-100 flex h-16 w-screen items-center justify-between px-7">
       <div className="flex items-center gap-5">
@@ -44,7 +44,7 @@ export function FormNav() {
           className="flex text-2xl font-bold tracking-tight scroll-m-20"
         >
           sil-
-          <p className="text-[#dc2626] ">saas/</p>
+          <p className="text-[#dc2626]">saas/</p>
         </Link>
         <NavigationMenu className="hidden lg:block">
           <NavigationMenuList>
@@ -64,7 +64,7 @@ export function FormNav() {
                           href={component.href}
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <p>{component.title}</p>
+                          <p className="text-sm">{component.title}</p>
                           <p className="text-xs text-muted-foreground">
                             {component.description}
                           </p>
@@ -84,11 +84,9 @@ export function FormNav() {
         </NavigationMenu>
       </div>
       <div className="flex items-center">
-        <div className="hidden lg:block items-center space-x-3">
+        <div className="hidden lg:block items-center space-x-5">
           <Link href="/auth">
-            <Button variant="link" className="text-[#0a0a0a] dark:text-white">
-              Fazer login
-            </Button>
+            <Button variant="link">Fazer login</Button>
           </Link>
           <Link href="/auth">
             <Button>Registre-se gratuitamente</Button>
@@ -124,7 +122,7 @@ export function FormNav() {
                             href={component.href}
                             className="flex flex-col items-start select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <p>{component.title}</p>
+                            <p className="text-sm">{component.title}</p>
                             <p className="text-xs text-muted-foreground">
                               {component.description}
                             </p>
@@ -165,7 +163,7 @@ export function FormNav() {
             target="_blank"
             className="flex items-center gap-2"
           >
-            <Button variant="link" className="p-0 font-semibold">
+            <Button variant="link" className="p-0 text-[#dc2626] font-semibold">
               Sillas Emanoel
             </Button>
             <Image

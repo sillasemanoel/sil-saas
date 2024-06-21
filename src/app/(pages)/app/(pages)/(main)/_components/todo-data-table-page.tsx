@@ -33,9 +33,12 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Todo } from "../types";
+import { Todo } from "@/app/(pages)/app/(pages)/(main)/types";
 import { useRouter } from "next/navigation";
-import { deleteTodo, upsertTodo } from "../actions";
+import {
+  deleteTodo,
+  upsertTodo,
+} from "@/app/(pages)/app/(pages)/(main)/actions";
 import { toast } from "@/components/ui/use-toast";
 
 type TodoDataTable = {
@@ -87,7 +90,14 @@ export function TodoDataTable({ data }: TodoDataTable) {
           ? "default"
           : "secondary";
 
-        return <Badge variant={variant}>{status}</Badge>;
+        const className =
+          variant === "default" ? "bg-[#dc2626] text-white" : "";
+
+        return (
+          <Badge variant={variant} className={className}>
+            {status}
+          </Badge>
+        );
       },
     },
     {
@@ -96,7 +106,7 @@ export function TodoDataTable({ data }: TodoDataTable) {
         return (
           <Button
             variant="link"
-            className="text-[#0a0a0a] dark:text-white text-muted-foreground"
+            className="text-muted-foreground"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
             Título

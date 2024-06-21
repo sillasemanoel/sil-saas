@@ -14,7 +14,7 @@ import {
   DashboardSidebarHeaderTitle,
   DashboardSidebarFooter,
 } from "@/components/dashboard/sidebar";
-import { UserDropdown } from "./user-dropdown";
+import { UserDropdown } from "@/app/(pages)/app/_components/user-dropdown";
 import { Session } from "next-auth";
 
 type Props = {
@@ -36,7 +36,7 @@ export function FormLayout({ user }: Props) {
           className="flex text-2xl font-bold tracking-tight scroll-m-20"
         >
           sil-
-          <p className="text-[#dc2626] ">saas/</p>
+          <p className="text-[#dc2626]">saas/</p>
         </Link>
       </DashboardSidebarLogo>
       <DashboardSidebarMain>
@@ -48,7 +48,11 @@ export function FormLayout({ user }: Props) {
             </DashboardSidebarNavLink>
             <DashboardSidebarNavLink
               href="/app/settings"
-              active={isActive("/app/settings")}
+              active={
+                isActive("/app/settings") ||
+                isActive("/app/settings/theme") ||
+                isActive("/app/settings/billing")
+              }
             >
               <MixerVerticalIcon className="w-4 h-4" />
               Configurações
