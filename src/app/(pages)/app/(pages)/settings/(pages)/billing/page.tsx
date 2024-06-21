@@ -31,7 +31,7 @@ export default async function Page() {
         </div>
       </CardContent>
       <CardFooter className="flex items-center justify-between border-t border-border pt-6">
-        <span>Para um maior limite, assine o PRO</span>
+        <span>Para um maior limite, assine o plano PRO</span>
         <Button type="submit">Assine por R$9/ mês</Button>
       </CardFooter>
     </Card>

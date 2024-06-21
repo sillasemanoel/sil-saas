@@ -31,7 +31,7 @@ type ProfileFormProps = {
   defaultValues: Session["user"];
 };
 
-export function ProfileForm({ defaultValues }: ProfileFormProps) {
+export function FormPage({ defaultValues }: ProfileFormProps) {
   const router = useRouter();
 
   const form = useForm<z.infer<typeof updateProfileSchema>>({
