@@ -16,7 +16,6 @@ export function middleware(request: NextRequest) {
     "/app/settings",
     "/app/settings/theme",
     "/app/settings/billing",
-    "/app/upgrade",
   ];
 
   console.log({
