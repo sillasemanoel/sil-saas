@@ -3,8 +3,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import { updateProfile } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/actions";
-import { updateProfileSchema } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/schemas";
+import { updateProfile } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/_actions/actions";
+import { updateProfileSchema } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/_schemas/schema";
 import { toast } from "@/components/ui/use-toast";
 import { z } from "zod";
 import {
@@ -31,7 +31,7 @@ type ProfileFormProps = {
   defaultValues: Session["user"];
 };
 
-export function FormPage({ defaultValues }: ProfileFormProps) {
+export function FormProfile({ defaultValues }: ProfileFormProps) {
   const router = useRouter();
 
   const form = useForm<z.infer<typeof updateProfileSchema>>({

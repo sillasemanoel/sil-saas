@@ -1,10 +1,5 @@
-import { FormNavGlobalPage } from "@/app/(pages)/_components/form-nav-global-page";
+import { FormTask } from "@/app/(pages)/products/task/_components/form-page";
 
 export default function Task() {
-  return (
-    <section>
-      <FormNavGlobalPage />
-      <p>task</p>
-    </section>
-  );
+  return <FormTask />;
 }

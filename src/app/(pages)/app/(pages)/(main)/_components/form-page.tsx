@@ -4,14 +4,14 @@ import {
   DashboardPageHeaderNav,
   DashboardPageHeaderTitle,
   DashboardPageMain,
-} from "@/components/dashboard/page";
+} from "@/components/custom/page";
 import { TodoDataTable } from "@/app/(pages)/app/(pages)/(main)/_components/todo-data-table-page";
 import { TodoUpsertSheet } from "@/app/(pages)/app/(pages)/(main)/_components/todo-upsert-sheet-page";
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "@radix-ui/react-icons";
-import { getUserTodos } from "@/app/(pages)/app/(pages)/(main)/actions";
+import { getUserTodos } from "@/app/(pages)/app/(pages)/(main)/_actions/actions";
 
-export async function FormPage() {
+export async function FormMain() {
   const todos = await getUserTodos();
 
   return (

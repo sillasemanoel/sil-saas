@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { components } from "@/utils/products";
+import { components } from "@/app/(pages)/_utils/products";
 
 export function CustomNavigationMenu() {
   return (

@@ -15,7 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
-import { components } from "@/utils/products";
+import { components } from "@/app/(pages)/_utils/products";
 
 export function CustomSheet() {
   return (

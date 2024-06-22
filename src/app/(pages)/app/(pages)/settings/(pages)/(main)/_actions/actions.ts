@@ -1,7 +1,7 @@
 "use server";
 
 import { z } from "zod";
-import { updateProfileSchema } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/schemas";
+import { updateProfileSchema } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/_schemas/schema";
 import { auth } from "@/services/auth";
 import { prisma } from "@/services/database";
 

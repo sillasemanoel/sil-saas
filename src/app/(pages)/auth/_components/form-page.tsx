@@ -31,7 +31,7 @@ const FormSchema = z.object({
   }),
 });
 
-export function FormPage() {
+export function FormAuth() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {

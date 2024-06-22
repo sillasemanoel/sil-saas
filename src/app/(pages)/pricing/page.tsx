@@ -1,10 +1,5 @@
-import { FormNavGlobalPage } from "@/app/(pages)/_components/form-nav-global-page";
+import { FormPricing } from "@/app/(pages)/pricing/_components/form-page";
 
 export default function Pricing() {
-  return (
-    <section>
-      <FormNavGlobalPage />
-      <p>pricing</p>
-    </section>
-  );
+  return <FormPricing />;
 }

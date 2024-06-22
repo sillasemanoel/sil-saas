@@ -8,7 +8,7 @@ export function Logo(props: Props) {
   return (
     <Link
       href={props.href}
-      className="flex text-2xl font-bold tracking-tight scroll-m-20 text-[#e11d48]"
+      className="flex text-2xl text-[#1c1917] dark:text-white font-bold tracking-tight scroll-m-20"
     >
       sil-saas/
     </Link>

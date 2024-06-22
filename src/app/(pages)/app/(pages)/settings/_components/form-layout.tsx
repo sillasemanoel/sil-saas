@@ -3,7 +3,7 @@ import {
   DashboardPageHeader,
   DashboardPageHeaderTitle,
   DashboardPageMain,
-} from "@/components/dashboard/page";
+} from "@/components/custom/page";
 import { SettingsSidebar } from "@/app/(pages)/app/(pages)/settings/_components/settings-sidebar";
 
 type Props = {

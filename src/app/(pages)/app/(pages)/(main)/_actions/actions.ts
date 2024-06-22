@@ -6,7 +6,7 @@ import { z } from "zod";
 import {
   deleteTodoSchema,
   upsertTodoSchema,
-} from "@/app/(pages)/app/(pages)/(main)/schema";
+} from "@/app/(pages)/app/(pages)/(main)/_schemas/schema";
 
 export async function getUserTodos() {
   const session = await auth();

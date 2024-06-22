@@ -4,7 +4,7 @@ import {
   DashboardSidebarNav,
   DashboardSidebarNavLink,
   DashboardSidebarNavMain,
-} from "@/components/dashboard/sidebar";
+} from "@/components/custom/sidebar";
 import { usePathname } from "next/navigation";
 
 export function SettingsSidebar() {

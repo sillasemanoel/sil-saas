@@ -33,12 +33,12 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Todo } from "@/app/(pages)/app/(pages)/(main)/types";
+import { Todo } from "@/app/(pages)/app/(pages)/(main)/_types/types";
 import { useRouter } from "next/navigation";
 import {
   deleteTodo,
   upsertTodo,
-} from "@/app/(pages)/app/(pages)/(main)/actions";
+} from "@/app/(pages)/app/(pages)/(main)/_actions/actions";
 import { toast } from "@/components/ui/use-toast";
 
 type TodoDataTable = {

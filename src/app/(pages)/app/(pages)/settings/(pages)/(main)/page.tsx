@@ -1,8 +1,8 @@
 import { auth } from "@/services/auth";
-import { FormPage } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/_components/form-page";
+import { FormProfile } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/_components/form-page";
 
-export default async function Page() {
+export default async function Profile() {
   const session = await auth();
 
-  return <FormPage defaultValues={session?.user} />;
+  return <FormProfile defaultValues={session?.user} />;
 }

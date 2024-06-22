@@ -12,10 +12,10 @@ import {
   DashboardSidebarNavLink,
   DashboardSidebarHeaderTitle,
   DashboardSidebarFooter,
-} from "@/components/dashboard/sidebar";
+} from "@/components/custom/sidebar";
 import { UserDropdown } from "@/app/(pages)/app/_components/user-dropdown";
 import { Session } from "next-auth";
-import { Logo } from "@/components/dashboard/logo";
+import { Logo } from "@/components/custom/logo";
 
 type Props = {
   user: Session["user"];

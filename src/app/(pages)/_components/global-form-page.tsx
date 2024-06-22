@@ -3,14 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/dashboard/logo";
+import { Logo } from "@/components/custom/logo";
 import { CustomNavigationMenu } from "@/app/(pages)/_components/navigation-menu";
 import { CustomSheet } from "@/app/(pages)/_components/sheet";
 import { CustomDeveloper } from "@/app/(pages)/_components/develope";
 
-export function FormNavGlobalPage() {
+export function GlobalFormPage() {
   return (
-    <nav className="fixed z-100 flex h-16 w-screen items-center justify-between px-7">
+    <nav className="fixed z-10 flex h-16 w-screen items-center justify-between px-7 bg-white dark:bg-[#0c0a09]">
       <div className="flex items-center gap-5">
         <Logo href="/" />
         <CustomNavigationMenu />

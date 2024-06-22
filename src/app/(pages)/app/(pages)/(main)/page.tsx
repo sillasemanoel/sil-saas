@@ -1,9 +1,9 @@
-import { FormPage } from "@/app/(pages)/app/(pages)/(main)/_components/form-page";
+import { FormMain } from "@/app/(pages)/app/(pages)/(main)/_components/form-page";
 
-export default function Page() {
+export default function Main() {
   return (
     <section>
-      <FormPage />
+      <FormMain />
     </section>
   );
 }

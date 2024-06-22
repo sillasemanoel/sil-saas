@@ -1,7 +1,5 @@
+import { FormHelp } from "@/app/(pages)/help/_components/form-page";
+
 export default function Help() {
-  return (
-    <section>
-      <p>help</p>
-    </section>
-  );
+  return <FormHelp />;
 }
