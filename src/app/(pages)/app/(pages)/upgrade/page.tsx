@@ -1,3 +1,7 @@
 export default async function Upgrade() {
-  return <div>Upgrade</div>;
+  return (
+    <div>
+      <p>upgrade</p>
+    </div>
+  );
 }

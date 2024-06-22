@@ -1,10 +1,10 @@
-import { FormNavPage } from "@/app/(pages)/_components/form-nav-page";
+import { FormNavGlobalPage } from "@/app/(pages)/_components/form-nav-global-page";
 import { FormPage } from "@/app/(pages)/(main)/_components/form-page";
 
 export default function RootPage() {
   return (
     <section>
-      <FormNavPage />
+      <FormNavGlobalPage />
       <FormPage />
     </section>
   );

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HomeIcon, MixerVerticalIcon } from "@radix-ui/react-icons";
 import {
@@ -16,6 +15,7 @@ import {
 } from "@/components/dashboard/sidebar";
 import { UserDropdown } from "@/app/(pages)/app/_components/user-dropdown";
 import { Session } from "next-auth";
+import { Logo } from "@/components/dashboard/logo";
 
 type Props = {
   user: Session["user"];
@@ -31,13 +31,7 @@ export function FormLayout({ user }: Props) {
   return (
     <DashboardSidebar>
       <DashboardSidebarLogo>
-        <Link
-          href="/app"
-          className="flex text-2xl font-bold tracking-tight scroll-m-20"
-        >
-          sil-
-          <p className="text-[#dc2626]">saas/</p>
-        </Link>
+        <Logo href="/app" />
       </DashboardSidebarLogo>
       <DashboardSidebarMain>
         <DashboardSidebarNav>

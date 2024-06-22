@@ -90,14 +90,7 @@ export function TodoDataTable({ data }: TodoDataTable) {
           ? "default"
           : "secondary";
 
-        const className =
-          variant === "default" ? "bg-[#dc2626] text-white" : "";
-
-        return (
-          <Badge variant={variant} className={className}>
-            {status}
-          </Badge>
-        );
+        return <Badge variant={variant}>{status}</Badge>;
       },
     },
     {
