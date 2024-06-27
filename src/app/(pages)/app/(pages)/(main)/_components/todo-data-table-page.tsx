@@ -136,7 +136,7 @@ export function TodoDataTable({ data }: TodoDataTable) {
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>Ações</DropdownMenuLabel>
               <DropdownMenuItem
-                onClick={() => navigator.clipboard.writeText(todo.id)}
+                onClick={() => navigator.clipboard.writeText(todo.title)}
               >
                 Copiar o titulo
               </DropdownMenuItem>
