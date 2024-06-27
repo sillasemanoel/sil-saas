@@ -9,7 +9,7 @@ import { TodoDataTable } from "@/app/(pages)/app/(pages)/(main)/_components/todo
 import { TodoUpsertSheet } from "@/app/(pages)/app/(pages)/(main)/_components/todo-upsert-sheet-page";
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "@radix-ui/react-icons";
-import { getUserTodos } from "@/app/(pages)/app/(pages)/(main)/_actions/actions";
+import { getUserTodos } from "@/app/(pages)/app/(pages)/(main)/_actions/action";
 
 export async function FormMain() {
   const todos = await getUserTodos();
@@ -19,12 +19,14 @@ export async function FormMain() {
       <DashboardPageHeader>
         <DashboardPageHeaderTitle>Tarefas</DashboardPageHeaderTitle>
         <DashboardPageHeaderNav>
-          <TodoUpsertSheet>
-            <Button variant="outline" className="flex gap-2">
-              <PlusIcon className="w-4 h-4" />
-              Adicionar tarefa
-            </Button>
-          </TodoUpsertSheet>
+          <DashboardPageHeaderNav>
+            <TodoUpsertSheet>
+              <Button variant="outline" size="sm">
+                <PlusIcon className="w-4 h-4 mr-3" />
+                Adicionar tarefa
+              </Button>
+            </TodoUpsertSheet>
+          </DashboardPageHeaderNav>
         </DashboardPageHeaderNav>
       </DashboardPageHeader>
       <DashboardPageMain>

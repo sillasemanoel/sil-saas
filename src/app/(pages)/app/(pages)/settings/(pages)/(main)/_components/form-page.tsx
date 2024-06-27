@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import { updateProfile } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/_actions/actions";
+import { updateProfile } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/_actions/action";
 import { updateProfileSchema } from "@/app/(pages)/app/(pages)/settings/(pages)/(main)/_schemas/schema";
 import { toast } from "@/components/ui/use-toast";
 import { z } from "zod";
@@ -27,11 +27,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-type ProfileFormProps = {
+type FormProfileProps = {
   defaultValues: Session["user"];
 };
 
-export function FormProfile({ defaultValues }: ProfileFormProps) {
+export function FormProfile({ defaultValues }: FormProfileProps) {
   const router = useRouter();
 
   const form = useForm<z.infer<typeof updateProfileSchema>>({

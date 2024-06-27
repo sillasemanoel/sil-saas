@@ -24,8 +24,8 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Todo } from "@/app/(pages)/app/(pages)/(main)/_types/types";
-import { upsertTodo } from "@/app/(pages)/app/(pages)/(main)/_actions/actions";
+import { Todo } from "@/app/(pages)/app/(pages)/(main)/_types/type";
+import { upsertTodo } from "@/app/(pages)/app/(pages)/(main)/_actions/action";
 import { useRouter } from "next/navigation";
 import { toast } from "@/components/ui/use-toast";
 

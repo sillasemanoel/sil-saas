@@ -33,12 +33,12 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Todo } from "@/app/(pages)/app/(pages)/(main)/_types/types";
+import { Todo } from "@/app/(pages)/app/(pages)/(main)/_types/type";
 import { useRouter } from "next/navigation";
 import {
   deleteTodo,
   upsertTodo,
-} from "@/app/(pages)/app/(pages)/(main)/_actions/actions";
+} from "@/app/(pages)/app/(pages)/(main)/_actions/action";
 import { toast } from "@/components/ui/use-toast";
 
 type TodoDataTable = {
@@ -85,9 +85,9 @@ export function TodoDataTable({ data }: TodoDataTable) {
       cell: ({ row }) => {
         const { doneAt } = row.original;
 
-        const status: "Feito" | "Esperando" = doneAt ? "Feito" : "Esperando";
-        const variant: "default" | "secondary" = doneAt
-          ? "default"
+        const status: "feita" | "esperando" = doneAt ? "feita" : "esperando";
+        const variant: "outline" | "secondary" = doneAt
+          ? "outline"
           : "secondary";
 
         return <Badge variant={variant}>{status}</Badge>;
@@ -99,7 +99,6 @@ export function TodoDataTable({ data }: TodoDataTable) {
         return (
           <Button
             variant="link"
-            className="text-muted-foreground"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
             Título
@@ -111,7 +110,7 @@ export function TodoDataTable({ data }: TodoDataTable) {
     },
     {
       accessorKey: "createdAt",
-      header: () => <div className="text-right">Criado em</div>,
+      header: () => <div className="text-right">Creado em</div>,
       cell: ({ row }) => {
         return (
           <div className="text-right font-medium">
@@ -130,16 +129,16 @@ export function TodoDataTable({ data }: TodoDataTable) {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="h-8 w-8 p-0">
-                <span className="sr-only">Open menu</span>
+                <span className="sr-only">Abrir menu</span>
                 <DotsHorizontalIcon className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>Ações</DropdownMenuLabel>
               <DropdownMenuItem
-                onClick={() => navigator.clipboard.writeText(todo.title)}
+                onClick={() => navigator.clipboard.writeText(todo.id)}
               >
-                Copiar título
+                Copiar o titulo
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={() => handleToggleDoneTodo(todo)}>
@@ -228,7 +227,8 @@ export function TodoDataTable({ data }: TodoDataTable) {
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
-          Total de ({table.getFilteredRowModel().rows.length}) tarefa(s).
+          {table.getFilteredSelectedRowModel().rows.length} of{" "}
+          {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
         <div className="space-x-2">
           <Button
@@ -237,7 +237,7 @@ export function TodoDataTable({ data }: TodoDataTable) {
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
-            Voltar
+            Anterior
           </Button>
           <Button
             variant="outline"
@@ -245,7 +245,7 @@ export function TodoDataTable({ data }: TodoDataTable) {
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
-            Avançar
+            Próximo
           </Button>
         </div>
       </div>

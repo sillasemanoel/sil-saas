@@ -1,4 +1,3 @@
-// components/ui/components-data.ts
 export const components: {
   title: string;
   href: string;
